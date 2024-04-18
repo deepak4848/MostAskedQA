@@ -1,0 +1,26 @@
+Local and Global verible.Veriable in C#.difference between var And Dynamic keyword.
+Filters(Action,Authorization,Result,Exception) in MVC Core.Filter vs Middleware,concept of Filters in MVC?
+Explain Model, View and Controller (business,Data layer-Model,display-User,Logic)
+Middleware in mvc core.
+Design pattern 
+Partial View,Partial view and partial Class
+a.view-layout page,markup tags like body, HTML, head, title, meta etc include,not lightweight as compare to Partial View.
+b.Partial view-no layout page(no header,footer)
+Method overloading and Method Overriding.
+Difference b/w MVC Core version 8.0,7.0,5.0
+Constractior in c#.
+return types and action method (View Result,JSON Result,Redirect Result
+What is the difference between ‘ViewResult’ and ‘ActionResult’?
+differentiation between View and Partial View?
+multiple filters are used in MVC, how is the ordering of execution of the filters done?
+differentiate between ActionResult and ViewResult?
+1.1)Temp data:pass data one controller to another controller/one action to another action
+1.2)View data:pass data controller to view.
+1.3)View Bag: also pass data controller to view.
+What is statemamangment
+different properties of MVC routes? Route Name,URL Pattern,Defaults,Constraints (ControllerName,ActionMethodName,Parameter),URL{controller}/{action}/{id}
+validation in MVC? DataType, Required, Range, and StringLength
+ViewState in MVC?
+different return types of a controller action method?ViewResult,PartialviewResult,RedirectResult,jsonResult
+MVC Scaffolding?code generation framework
+Razor View Engine in MVC?
