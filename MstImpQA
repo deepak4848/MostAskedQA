@@ -1,4 +1,6 @@
 Local and Global verible.Veriable in C#.difference between var And Dynamic keyword.
+a)Local var use inside a function not accessible outside function,Global var use outside of other function or anywhere.
+b)var store any type of data strin,int,array,boolean it change on compile time.
 Filters(Action,Authorization,Result,Exception) in MVC Core.Filter vs Middleware,concept of Filters in MVC?
 Explain Model, View and Controller (business,Data layer-Model,display-User,Logic)
 Middleware in mvc core.
@@ -9,7 +11,8 @@ b.Partial view-no layout page(no header,footer)
 Method overloading and Method Overriding.
 Difference b/w MVC Core or What's new in version 8.0,7.0,5.0
 Constractior in c#.
-return types and action method (View Result,JSON Result,Redirect Result
+return types and action method
+return is action method type(ViewResult{html content},JSONResult{jsondata},RedirectResult{URL},ContentResult{text, XML})
 What is the difference between ‘ViewResult’ and ‘ActionResult’?
 differentiation between View and Partial View?
 multiple filters are used in MVC, how is the ordering of execution of the filters done?
