@@ -46,3 +46,4 @@ diff b/w the “DELETE” and “TRUNCATE” commands?
 diff b/w a “Local Temporary Table” and “Global Temporary Table”?
 SQL joins?Inner,Outer(Left/Right),Full 
 A string value can’t be changed. Each time you change a string variable, it actually creates a new string instance and dereferences the old value String is immutable
+An enum is a special "class" that represents a group of constants (unchangeable/read-only variables).
