@@ -48,3 +48,4 @@ SQL joins?Inner,Outer(Left/Right),Full
 A string value can’t be changed. Each time you change a string variable, it actually creates a new string instance and dereferences the old value String is immutable
 An enum is a special "class" that represents a group of constants (unchangeable/read-only variables).
 State mamangment in c#.server side and client side.
+What is the Singleton Design Pattern,ensures that a class has only one instance, and provides a global point of access 
