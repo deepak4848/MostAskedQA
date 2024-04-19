@@ -38,9 +38,9 @@ difference between boxing and unboxing in C#?
 What is the Singleton Design Pattern, and how to implement it in C#?
 main pillar of Oops?Abstraction,Encapsulation,Inheritance,Polymorphism
 Abstraction and Encapsulation?show only necessary features without background details is Abst.wrapping,data,var,methods,functions in single unit is Encap
-Method Overloading?method name is same, but parameter,parameter order,parameter type is diff
-Method Overriding?base(Parent) class (need to mark a method as virtual) method in derived(Chield) class with different logic but same method name(override keyword) and same parameter.
- Can we write the logic in the Interface?before 8.0 no but in we can write
+Method Overloading?method name is same, but parameter,parameter order,parameter type is diff,Runtim Polymorphism(Early Bind)
+Method Overriding?base(Parent) class (need to mark a method as virtual) method in derived(Chield) class with different logic but same method name(override keyword) and same parameter.CompileTime(Latebind)
+Can we write the logic in the Interface?before 8.0 no but in we can write
 diff b/w “Stored Procedure” and “Function”?
 diff b/w the “DELETE” and “TRUNCATE” commands?
 diff b/w a “Local Temporary Table” and “Global Temporary Table”?
