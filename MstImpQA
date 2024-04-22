@@ -1,4 +1,6 @@
-Local and Global verible.Veriable in C#.difference between var And Dynamic keyword.
+Local(Use inside function) and Global(Use Outside anywhere function) verible.Veriable in C#.difference between var And Dynamic keyword.
+DataType in SQL-Int,Float,Decimal,Char,Varchar,Datetime.Diff b/w Char(Fixed Length),Varchar(Variable length) & nvarchar(Veriable length,Supprot unicharacter,international text)
+DataTypes in C#-int,float,String,Boolean,Char,String,enum,struct
 a)Local var use inside a function not accessible outside function,Global var use outside of other function or anywhere.
 b)var store any type of data strin,int,array,boolean it change on compile time.
 Filters(Action,Authorization,Result,Exception) in MVC Core.Filter vs Middleware,concept of Filters in MVC?
@@ -58,6 +60,8 @@ Delete(DML)-Used to delete on or more record with condition but not delete schem
 Truncate(DDL)-used to delete all record,not used where condition,not delete schema(tbl structure) truncate table employee,not roll back
 Drop(DDL)-used to delete all record,delete schema(tbl structure) drop table employee,not roll back
 StoreProcedure-return or not return value,sp have i/p & o/p both parameter,call sp inside function,try catch ex in sp
+--------------------JavaScript----------------------
+
 Function-must return value,F have only i/p parameter,not call sp inside function,try catch ex not in Funct
 CTE-Common Table Expression is an expression that returns a temporary result set.Reference with in SELECT,INSERT,UPDATE,DELETE
 Nth Higest Salary-select distinct Top(N) salary from employee order by salary desc-->select top(1) salary from (select distinct Top(N) salary from employee order by salary desc)result order by salary
