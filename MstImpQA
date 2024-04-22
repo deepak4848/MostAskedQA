@@ -1,6 +1,7 @@
 Local(Use inside function) and Global(Use Outside anywhere function) verible.Veriable in C#.difference between var And Dynamic keyword.
 DataType in SQL-Int,Float,Decimal,Char,Varchar,Datetime.Diff b/w Char(Fixed Length),Varchar(Variable length) & nvarchar(Veriable length,Supprot unicharacter,international text)
 DataTypes in C#-int,float,String,Boolean,Char,String,enum,struct
+DataTypes in JavaScript-let,Var,Constant
 a)Local var use inside a function not accessible outside function,Global var use outside of other function or anywhere.
 b)var store any type of data strin,int,array,boolean it change on compile time.
 Filters(Action,Authorization,Result,Exception) in MVC Core.Filter vs Middleware,concept of Filters in MVC?
