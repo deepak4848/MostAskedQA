@@ -1,14 +1,22 @@
 Local(Use inside function) and Global(Use Outside anywhere function) verible.Veriable in C#.difference between var And Dynamic keyword.
+SelfJoin-Jion with self table
 DataType in SQL-Int,Float,Decimal,Char,Varchar,Datetime.Diff b/w Char(Fixed Length),Varchar(Variable length) & nvarchar(Veriable length,Supprot unicharacter,international text)
 DataTypes in C#-int,float,String,Boolean,Char,String,enum,struct
-DataTypes in JavaScript-let,Var,Constant
+DataTypes in JavaScript-let(Globle Scope,Entire Function),Var,Constant
+Constant(declare constants,Con not be Changed,not change compileTime) & Readonly(used to value inetilized constructor,Change Runtime)
+Abstract(TypeofPoymorphism-Overriding,have fields and properties,not create object so inheret,base/drive) and Interface-both used to abstraction
+constructor-
+singleton and static class in c#
+interface vs abstract class
 a)Local var use inside a function not accessible outside function,Global var use outside of other function or anywhere.
 b)var store any type of data strin,int,array,boolean it change on compile time.
 Filters(Action,Authorization,Result,Exception) in MVC Core.Filter vs Middleware,concept of Filters in MVC?
 Explain Model, View and Controller (business,Data layer-Model,display-User,Logic)
 Middleware in mvc core.
-Design pattern 
-Partial View,Partial view and partial Class
+Types Of Class-Abstract(Inheret by Other class),Static(Not Inheret by Other Class),Sealed(Not Inheret by Other Class),Partial(class Devid into Partial),Nested Class
+Access Modifier-Public,private,protected,Internal
+Design pattern-MVC,DI,Repository 
+TypesofView-Partial View,Partial view and partial Class
 a.view-layout page,markup tags like body, HTML, head, title, meta etc include,not lightweight as compare to Partial View.
 b.Partial view-no layout page(no header,footer)
 DI-software design pattern allows us to separate the dependencies of a class from its implementation.Loosely copuled and Titly copule 
@@ -46,14 +54,15 @@ Method Overloading?method name is same, but parameter,parameter order,parameter 
 Method Overriding?base(Parent) class (need to mark a method as virtual) method in derived(Chield) class with different logic but same method name(override keyword) and same parameter.RunTime(Latebind)
 Can we write the logic in the Interface?before 8.0 no but in we can write
 diff b/w “Stored Procedure” and “Function”?
-diff b/w the “DELETE” and “TRUNCATE” commands?
-diff b/w a “Local Temporary Table” and “Global Temporary Table”?
+diff b/w the DELETE & TRUNCATE commands?
+diff b/w a Local Temporary and Global Temporary Table”?
 SQL joins?Inner,Outer(Left/Right),Full 
 A string value can’t be changed. Each time you change a string variable, it actually creates a new string instance and dereferences the old value String is immutable
 An enum is a special "class" that represents a group of constants (collection of unchangeable/read-only variables).
 State mamangment is technique(process to maintain data,behaviour) in c#.server side(Session,application state) and client side(viewstate,hiddenfield,Coockies,QuryString).
 What is the Singleton Design Pattern,ensures that a class has only one instance, and provides a global point of access 
-Trigger-Special type of store procedure use totrack deleted record or information(DML,DDL)
+--------------------------------SQL-----------------------
+Trigger-Special type of store procedure use to track deleted record or information(DML,DDL)
 View-Virtual table data not store in database(to improve performance,hide actual table information)
 Where,GroupBy,Having-where used for filter data on condition,GroupBy use for take value in group used by aggerigate function having clause contain aggregate function with group by
 SubQuery is Query with in Query
@@ -61,8 +70,7 @@ Delete(DML)-Used to delete on or more record with condition but not delete schem
 Truncate(DDL)-used to delete all record,not used where condition,not delete schema(tbl structure) truncate table employee,not roll back
 Drop(DDL)-used to delete all record,delete schema(tbl structure) drop table employee,not roll back
 StoreProcedure-return or not return value,sp have i/p & o/p both parameter,call sp inside function,try catch ex in sp
---------------------JavaScript----------------------
-
 Function-must return value,F have only i/p parameter,not call sp inside function,try catch ex not in Funct
 CTE-Common Table Expression is an expression that returns a temporary result set.Reference with in SELECT,INSERT,UPDATE,DELETE
 Nth Higest Salary-select distinct Top(N) salary from employee order by salary desc-->select top(1) salary from (select distinct Top(N) salary from employee order by salary desc)result order by salary
+--------------------JavaScript----------------------
