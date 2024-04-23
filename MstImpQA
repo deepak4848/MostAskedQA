@@ -15,7 +15,7 @@ Explain Model, View and Controller (business,Data layer-Model,display-User,Logic
 Middleware in mvc core.
 Types Of Class-Abstract(Inheret by Other class),Static(Not Inheret by Other Class),Sealed(Not Inheret by Other Class),Partial(class Devid into Partial),Nested Class
 Access Modifier-Public,private,protected,Internal
-Design pattern-MVC,DI,Repository 
+Design pattern-MVC,DI(Dependency Injection),Repository 
 TypesofView-Partial View,Partial view and partial Class
 a.view-layout page,markup tags like body, HTML, head, title, meta etc include,not lightweight as compare to Partial View.
 b.Partial view-no layout page(no header,footer)
@@ -74,3 +74,7 @@ Function-must return value,F have only i/p parameter,not call sp inside function
 CTE-Common Table Expression is an expression that returns a temporary result set.Reference with in SELECT,INSERT,UPDATE,DELETE
 Nth Higest Salary-select distinct Top(N) salary from employee order by salary desc-->select top(1) salary from (select distinct Top(N) salary from employee order by salary desc)result order by salary
 --------------------JavaScript----------------------
+different data types-Permitive(valuetype-int,float,bool,decimal),NonPermitive(ref type,class,array,string)
+Hosting-declare a variable using var, the declaration is hoisted to the top of its containing function or global scope.
+ “ == “(check only value) and “ === “(check value and dataTypes also) operators.
+let(block scope dataTypes,use only inside function{}),var(Globle,Use outiside any function) & Constatnt(Can not changed once inetilize,it is also block scope)
