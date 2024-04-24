@@ -74,7 +74,14 @@ Function-must return value,F have only i/p parameter,not call sp inside function
 CTE-Common Table Expression is an expression that returns a temporary result set.Reference with in SELECT,INSERT,UPDATE,DELETE
 Nth Higest Salary-select distinct Top(N) salary from employee order by salary desc-->select top(1) salary from (select distinct Top(N) salary from employee order by salary desc)result order by salary
 --------------------JavaScript----------------------
-different data types-Permitive(valuetype-int,float,bool,decimal),NonPermitive(ref type,class,array,string)
+different data types-Permitive(valuetype-string,number,boolean,undefined,null,symbol),NonPermitive(ref type-class,array,function,date,RegExp)
+array-special type of object used to store a collection of elements(data).store multiple values within a single variable[].array special kind object
+object-nonPremitive dataType,define in {},let obj1={A:"a1",B:10,C:"a3"},it's dataType,store data in key/value pairs
+Scope-Where data is access,Global(OutsideFunction)/Function(insideFunction)/Block(inthis {}/incondition,inside if/else)
 Hosting-declare a variable using var, the declaration is hoisted to the top of its containing function or global scope.
  “ == “(check only value) and “ === “(check value and dataTypes also) operators.
+$is aleas of jQuery,($/Jquery)are same
 let(block scope dataTypes,use only inside function{}),var(Globle,Use outiside any function) & Constatnt(Can not changed once inetilize,it is also block scope)
+getElementById-to find HTMLelement(div id),Single Element
+getElementbyClass-select multiple elemnt
+getElementbyTagName-
