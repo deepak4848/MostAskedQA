@@ -85,3 +85,4 @@ let(block scope dataTypes,use only inside function{}),var(Globle,Use outiside an
 getElementById-to find HTMLelement(div id),Single Element
 getElementbyClass-select multiple elemnt
 getElementbyTagName-
+Undefined and Null-variable decliearde but not assigned a value(valuenotGive),let x;x=??,print-O/p-Undefined,null-variable is decleriad but value is given null.
