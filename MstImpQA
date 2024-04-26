@@ -63,9 +63,11 @@ State mamangment is technique(process to maintain data,behaviour) in c#.server s
 What is the Singleton Design Pattern,ensures that a class has only one instance, and provides a global point of access 
 --------------------------------SQL-----------------------
 Trigger-Special type of store procedure use to track deleted record or information(DML,DDL)
-View-Virtual table data not store in database(to improve performance,hide actual table information)
+View-Virtual table data not store in database(to improve performance,DataSecurity,hide actual table information)
 Where,GroupBy,Having-where used for filter data on condition,GroupBy use for take value in group used by aggerigate function having clause contain aggregate function with group by
 SubQuery is Query with in Query
+Index-Retrieve dataFast.Used to speedup data searches/queries.Syntax-CREATE UNIQUE INDEX index_name on table_name (column_name);
+SQLsubset-DDL(Create,Alter,Drop,Truncate)/DML(Select,Insert,Update,Delete)/TCL(Commit,Rollback,Saveprint)
 Delete(DML)-Used to delete on or more record with condition but not delete schema(tbl structure) delete from employee where id=2,roll back
 Truncate(DDL)-used to delete all record,not used where condition,not delete schema(tbl structure) truncate table employee,not roll back
 Drop(DDL)-used to delete all record,delete schema(tbl structure) drop table employee,not roll back
