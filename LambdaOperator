@@ -1,0 +1,201 @@
+=========================================
+<---LambdaExpression1---->
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LinqExamples
+{
+    class Program
+    {
+        // example of delegate with one refernce
+        //declaring delegate 
+        public delegate void delg();
+        public static void underwork()
+        {
+            Console.WriteLine("I am underwork");
+        }
+        
+
+        static void Main(string[] args)
+        {
+            //passing the reference of method into delegate, method is static so no need to create the instance of class while passing reference in delegate.
+            // In .Net 1.0 developers used to pass the reference of function to the delegate as below:
+
+            delg work = new delg(underwork);
+            work();
+
+
+            // in .NET 2.0 and above .NET provides the concepts of Anonymous methods means methods without names and can be declared directly with delegate
+            delg work1 = delegate() { Console.WriteLine("I am Called anonymously"); };
+            work1();
+
+
+            // in .NET 3.5 and above .NET introduced Lambda expression to override the concepts of anonymous method...
+            delg work2 = () => { Console.WriteLine("I am called by Lambda operator"); };
+            work2();
+        }
+    }
+}
+=========================================
+<---LambdaExpression2---->
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LinqExamples
+{
+    class Program
+    {
+        // example of delegate with one refernce
+        //declaring delegate 
+        public delegate int delg(int x,int y);
+        public static int underwork(int x, int y)
+        {
+            return x * y;
+        }
+        
+
+        static void Main(string[] args)
+        {
+            //passing the reference of method into delegate, method is static so no need to create the instance of class while passing reference in delegate.
+            // In .Net 1.0 developers used to pass the reference of function to the delegate as below:
+
+            delg work = new delg(underwork);
+            Console.WriteLine(work(2,3));
+
+
+            // in .NET 2.0 and above .NET provides the concepts of Anonymous methods means methods without names and can be declared directly with delegate
+            delg work1 = delegate(int x,int y) { return x*y; };
+            Console.WriteLine(work1(2,8));
+
+
+            // in .NET 3.5 and above .NET introduced Lambda expression to override the concepts of anonymous method...
+            delg work2 = (x, y) => { return x * y; };
+            Console.WriteLine(work2(2,7));
+        }
+    }
+}
+=========================================
+<---LambdaExpression3---->
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LinqExamples
+{
+    class Program
+    {
+        // example of delegate with one refernce
+        //declaring delegate 
+        public delegate bool delg(int x,int y);
+        public static bool underwork(int x, int y)
+        {
+            return x == y;
+        }
+        
+
+        static void Main(string[] args)
+        {
+            //passing the reference of method into delegate, method is static so no need to create the instance of class while passing reference in delegate.
+            // In .Net 1.0 developers used to pass the reference of function to the delegate as below:
+
+            delg work = new delg(underwork);
+            Console.WriteLine(work(2,3));
+
+
+            // in .NET 2.0 and above .NET provides the concepts of Anonymous methods means methods without names and can be declared directly with delegate
+            delg work1 = delegate(int x,int y) { return x==y; };
+            Console.WriteLine(work1(2,2));
+
+
+            // in .NET 3.5 and above .NET introduced Lambda expression to override the concepts of anonymous method...
+            delg work2 = (x, y) => { return x == y; };
+            Console.WriteLine(work2(2,7));
+        }
+    }
+}
+=========================================
+<---LambdaExpression4---->
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LinqExamples
+{
+    class Program
+    {
+        
+        //declaring delegate 
+        public delegate bool delg(int x,int y);
+     
+        
+
+        static void Main(string[] args)
+        {
+            delg work1 = (x, y) => { return x == y; }; // Example of Lambda expression where you have to create {} curly braces with proper return keyword and other codes..
+            delg work2 = (x,y) => x==y; // Example of Lambda statement where we need not to write curly braces and not need to write return keyword. it requires only code which will return itself
+            Console.WriteLine(work1(2,7));
+            Console.WriteLine(work2(2,7));
+
+            //both above code will give the same result....
+
+
+            //below code is the example of Func<> delegate which can be used for our working without use of creating userdefined delegates as above,,
+            
+            //below is the example of delegate with string return type as mentioned in angular brackets e.g.<string> and without parameter
+            Func<string> work3 = () => {return "I am Called with Func";}; //Lambda expression with curly braces and proper return type
+            Func<string> work4 = () => "I am called with Func"; // Lambda statement without curly braces and without return type..
+
+            Console.WriteLine(work3());
+            Console.WriteLine(work4());
+            Console.WriteLine(work3.Invoke()); // You can also invoke like this...
+
+            //below code is replacement of delegate declared above with one boolean return type and two int parameters,
+            //by using Func<> which is itself works as delegate and accept return types and parameters inside angular brackets <>.
+
+            Func<int,int,bool> work5 = (x,y) => x==y; // here Func<int,int,bool> has int,int are types of two parameters and bool is the type of return type...
+            //will pass (x,y) as two parameter names
+            Console.WriteLine(work5(2, 3)); // will pass 2 to x and 3 to y ...
+
+            Func<int, int, int> work6 = (x, y) => x * y;
+            Console.WriteLine(work6(4, 4));
+        }
+    }
+}
+=========================================
+<---LambdaExpression5---->
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LinqExamples
+{
+    class Student
+    {
+
+        public int StudentID { get; set; }
+        public string StudentName { get; set; }
+        public int StudentAge { get; set; }
+
+        static void Main(string[] args)
+        {
+           
+            // passing Student type as parameter type and return type is bool ,, below delegate is checking for student age is greater than 18 or not..
+            Func<Student, bool> teenager = s => s.StudentAge > 18;
+            bool result = teenager(new Student { StudentID= 101, StudentName="Deepak", StudentAge=20 });
+            Console.WriteLine(result);
+ 
+        }
+    }
+}
