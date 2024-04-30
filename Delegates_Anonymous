@@ -1,0 +1,215 @@
+===========================================
+<-----delegatewithanonymousmethod----->
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LinqExamples
+{
+    class Program
+    {
+        // example of delegate with one refernce
+        //declaring delegate 
+        public delegate void delg();
+        public static void underwork()
+        {
+            Console.WriteLine("I am underwork");
+        }
+        
+
+        static void Main(string[] args)
+        {
+            //passing the reference of method into delegate, method is static so no need to create the instance of class while passing reference in delegate.
+            // In .Net 1.0 developers used to pass the reference of function to the delegate as below:
+
+            delg work = new delg(underwork);
+            work();
+
+
+            // in .NET 2.0 and above .NET provides the concepts of Anonymous methods means methods without names and can be declared directly with delegate
+            delg work1 = delegate() { Console.WriteLine("I am Called anonymously"); };
+            work1();
+           
+
+           
+            
+        }
+    }
+}
+===========================================
+<-----delegatewithmultiplereference----->
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LinqExamples
+{
+    class Program
+    {
+        // example of delegate with mutliple references
+        //declaring delegate without return type
+        public delegate void dowork();
+
+        //creating function1
+        public static void studing()
+        {
+            Console.WriteLine("I am studing ");
+        }
+        public static void playing()
+        {
+            Console.WriteLine("I am Playing");
+
+        }
+        public static void watching()
+        {
+            Console.WriteLine("I am watching");
+        }
+        static void Main(string[] args)
+        {
+            //passing the reference of method into delegate, method is static so no need to create the instance of class while passing reference in delegate.
+            dowork work = new dowork(studing);
+            work += new dowork(playing);
+            work += new dowork(watching);
+            work();
+        }
+    }
+}
+===========================================
+<-----delegatewithonereference----->
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LinqExamples
+{
+    class Program
+    {
+        // example of delegate with one refernce of method
+        //declaring delegate without return type
+        public delegate void dowork();
+
+        //creating function 
+        public static void studing()
+        {
+            Console.WriteLine("I am studing ");
+        }
+        static void Main(string[] args)
+        {
+            //passing the reference of method into delegate, method is static so no need to create the instance of class while passing reference in delegate.
+            dowork work = new dowork(studing);
+            work();
+        }
+    }
+}
+===========================================
+<-----delegatewithonereferencewithparamandboolreturntyp----->
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LinqExamples
+{
+    class Program
+    {
+        // example of delegate with one refernce
+        //declaring delegate with int return type and two parameters
+        public delegate bool chardelgate(string word,char ch);
+
+        //creating function1
+        public static bool CharCheck(string x, char y)
+        {
+            for (int i = 0; i < x.Length; i++)
+            {
+                if (x[i] == y)
+                    return true;
+            }
+            return false;
+        }
+
+        static void Main(string[] args)
+        {
+            //passing the reference of method into delegate, method is static so no need to create the instance of class while passing reference in delegate.
+            chardelgate work = new chardelgate(CharCheck);
+            bool result = work("India", 'a');
+            if (result)
+                Console.WriteLine("Character Found ");
+            else
+                Console.WriteLine("Character Not Found");
+
+           
+            
+        }
+    }
+}
+===========================================
+<-----delegatewithonereferencewithparamandreturntyp----->
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LinqExamples
+{
+    class Program
+    {
+        // example of delegate with one refernce
+        //declaring delegate with int return type and two parameters
+        public delegate int calc(int x,int y);
+
+        //creating function1
+        public static int add(int x, int y)
+        {
+            return x + y;
+        }
+        
+        static void Main(string[] args)
+        {
+            //passing the reference of method into delegate, method is static so no need to create the instance of class while passing reference in delegate.
+            calc work = new calc(add);
+            int sum = work(2, 3);
+            Console.WriteLine("The sum is : " + sum);
+           
+            
+        }
+    }
+}
+===========================================
+<-----delegatewithonereferencewithparameter----->
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LinqExamples
+{
+    class Program
+    {
+        // example of delegate with one refernce
+        //declaring delegate without return type and one parameter
+        public delegate void dowork(string task);
+
+        //creating function1
+        public static void task(string s)
+        {
+            Console.WriteLine("I am " + s);
+        }
+        
+        static void Main(string[] args)
+        {
+            //passing the reference of method into delegate, method is static so no need to create the instance of class while passing reference in delegate.
+            dowork work = new dowork(task);
+           
+            work("studing");
+        }
+    }
+}
