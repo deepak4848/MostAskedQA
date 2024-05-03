@@ -17,7 +17,14 @@ select * from customer
 end
 insert into customer values(1,600,'Deepak','kum','4189911','delhi')
 but insert operation are not working
-=============================
+---------------------------
+create trigger trgActionLock on customer instead of insert,update,delete
+as
+begin
+print 'you can not Perform InsertUpdateDelete action'
+end
+insert into customer values(4,600,'Deepak','kum','4189911','delhi',default)
+--=================================--
 Type--
 for Trigger
 Insted of trigger
