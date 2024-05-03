@@ -1,0 +1,28 @@
+-------Trigger--------
+Trigger always on tale on particular table opretion/action
+for three action trigger are create Insert,Update,Delete
+
+--------Trigger---------
+create trigger Trginsert on customer for insert
+as
+begin
+select * from customer
+end
+insert into customer values(1,600,'Deepak','kum','4189911','delhi')
+----------------------------------
+create trigger Trginsert on customer Insted of insert
+as
+begin
+select * from customer
+end
+insert into customer values(1,600,'Deepak','kum','4189911','delhi')
+but insert operation are not working
+=============================
+Type--
+for Trigger
+Insted of trigger
+==========================
+1)DDL
+2)DML ---a)FOR   B)INSTEAD OF
+3)Log on
+
