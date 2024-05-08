@@ -11,6 +11,8 @@ interface vs abstract class
 a)Local var use inside a function not accessible outside function,Global var use outside of other function or anywhere.
 b)var store any type of data strin,int,array,boolean it change on compile time.
 Filters(Action,Authorization,Result,Exception) in MVC Core.Filter vs Middleware,concept of Filters in MVC?
+Filters used for security purpose before user are login-
+JWT-Json web Token 
 Explain Model, View and Controller (business,Data layer-Model,display-User,Logic)
 Middleware in mvc core.
 Types Of Class-Abstract(Inheret by Other class),Static(Not Inheret by Other Class),Sealed(Not Inheret by Other Class),Partial(class Devid into Partial),Nested Class
@@ -35,6 +37,8 @@ differentiate between ActionResult and ViewResult?
 What is statemamangment
 different properties of MVC routes? Route Name,URL Pattern,Defaults,Constraints (ControllerName,ActionMethodName,Parameter),URL{controller}/{action}/{id}
 validation in MVC? DataType, Required, Range, and StringLength
+Client Side-validation show before page load,before data is sbumitted,it is fast user exp(required,Custom,range,regularexpression,compare,)-use Js,Done on browser
+Server Side-Validation show after page load,after data is submitter,it is slow -Use C#,DoneOnServer(Model validation->Range,Required,Custom,RegularFexp,Compare)
 ViewState in MVC?
 different return types of a controller action method?ViewResult,PartialviewResult,RedirectResult,jsonResult
 MVC Scaffolding?code generation framework
