@@ -10,3 +10,48 @@
 ->Testing and Quality Assurance
 ->Stay Calm Under Pressure
 ->Documentation: Maintain clear and concise documentation for your code and projects
+<---==============================================-->
+Core C# and .NET Framework Questions:
+What is the difference between struct and class in C#?
+Explain the concept of delegates and events in C#.
+What are the different types of inheritance in C#?
+What is the purpose of the using statement in C#?
+What is LINQ (Language Integrated Query) and how is it useful?
+Explain the difference between IEnumerable and IQueryable.
+What are asynchronous programming and async/await keywords in C#?
+How does garbage collection work in .NET?
+What are extension methods in C#? Provide an example.
+Explain the concept of interfaces and when you would use them.
+----------------------------------
+ASP.NET Questions:
+What is ASP.NET MVC and how does it differ from Web Forms?
+Explain the ASP.NET Page Life Cycle.
+What are Razor Views in ASP.NET MVC?
+What is the role of a Controller in ASP.NET MVC?
+What are Action Filters in ASP.NET MVC? Give examples of their usage.
+What is ASP.NET Core and how does it differ from ASP.NET Framework?
+Explain the use of Dependency Injection (DI) in ASP.NET Core.
+What are the different types of ActionResult in ASP.NET MVC?
+How do you handle routing in ASP.NET MVC?
+What is the purpose of TempData in ASP.NET MVC?
+--------------------------------------
+SQL Server and Database Questions:
+What is the difference between DELETE and TRUNCATE statements in SQL?
+Explain the concept of ACID properties in database transactions.
+What are indexes in SQL Server and why are they important?
+What is a stored procedure and why would you use it?
+What is the difference between inner join and outer join?
+What is normalization and denormalization in database design?
+How do you optimize SQL queries for better performance?
+Explain the purpose of primary key and foreign key constraints in a database.
+What is the role of the HAVING clause in SQL?
+--------------------------------------------------
+How do you handle database transactions in C# using ADO.NET or Entity Framework?
+General Software Development and Problem-Solving Questions:
+Describe the software development lifecycle (SDLC) and its phases.
+How do you handle exceptions and error logging in your applications?
+Explain the concept of SOLID principles in object-oriented programming.
+How do you manage source code version control using Git or TFS?
+Describe a challenging problem you faced during development and how you solved it.
+What are unit testing and integration testing? How do you implement them in your projects?
+How do you keep yourself updated with the latest technologies and trends in the .NET ecosystem?
