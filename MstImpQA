@@ -6,6 +6,7 @@ DataTypes in JavaScript-let(Globle Scope,Entire Function),Var(Use OutsideFunctio
 Constant(declare constants,Con not be Changed,not change compileTime) & Readonly(used to value inetilized constructor,Change Runtime)
 Abstract(TypeofPoymorphism-Overriding,have fields and properties,not create object so inheret,base/drive) and Interface-both used to abstraction
 constructor-
+Tuple->is a data structure that allows you to group together a fixed number of elements of possibly different types into a single object
 singleton and static class in c#
 interface vs abstract class
 a)Local var use inside a function not accessible outside function,Global var use outside of other function or anywhere.
