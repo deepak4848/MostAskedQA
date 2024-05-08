@@ -2,7 +2,7 @@ Local(Use inside function) and Global(Use Outside anywhere function) verible.Ver
 SelfJoin-Jion with self table
 DataType in SQL-Int,Float,Decimal,Char,Varchar,Datetime.Diff b/w Char(Fixed Length),Varchar(Variable length) & nvarchar(Veriable length,Supprot unicharacter,international text)
 DataTypes in C#-int,float,String,Boolean,Char,String,enum,struct
-DataTypes in JavaScript-let(Globle Scope,Entire Function),Var,Constant
+DataTypes in JavaScript-let(Globle Scope,Entire Function),Var(Use OutsideFunctio),Constant(Nonchange)
 Constant(declare constants,Con not be Changed,not change compileTime) & Readonly(used to value inetilized constructor,Change Runtime)
 Abstract(TypeofPoymorphism-Overriding,have fields and properties,not create object so inheret,base/drive) and Interface-both used to abstraction
 constructor-
