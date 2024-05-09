@@ -8,6 +8,7 @@ Abstract(TypeofPoymorphism-Overriding,have fields and properties,not create obje
 constructor-
 Tuple->is a data structure that allows you to group together a fixed number of elements of possibly different types into a single object
 singleton and static class in c#
+Default TimoutOfSession->timeout to 20 minutes
 interface vs abstract class
 a)Local var use inside a function not accessible outside function,Global var use outside of other function or anywhere.
 b)var store any type of data strin,int,array,boolean it change on compile time.
