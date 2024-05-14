@@ -1,3 +1,6 @@
+-----------------2nd Highest Salary------------------------
+select top 1 salary from (select top 3 salary from employee1 order by salary desc)as T order by salary asc
+
 -------Trigger--------
 Trigger always on tale on particular table opretion/action
 for three action trigger are create Insert,Update,Delete
