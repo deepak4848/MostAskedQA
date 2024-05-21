@@ -23,10 +23,10 @@ Middleware in mvc core.
 Types Of Class-Abstract(Inheret by Other class),Static(Not Inheret by Other Class),Sealed(Not Inheret by Other Class),Partial(class Devid into Partial),Nested Class
 Access Modifier-Public,private,protected,Internal
 Design pattern-MVC,DI(Dependency Injection),Repository 
+DI-software design pattern allows to separate the dependencies of a class from its implementation.Loosely copuled(Repo,Interface Pattern Project,),Titly copule(Simple Project),use-Easy modif,Reuse Code,Easy Testing 
 TypesofView-Partial View,Partial view and partial Class
 a.view-layout page,markup tags like body, HTML, head, title, meta etc include,not lightweight as compare to Partial View.
 b.Partial view-no layout page(no header,footer)
-DI-software design pattern allows us to separate the dependencies of a class from its implementation.Loosely copuled and Titly copule 
 Method overloading and Method Overriding.
 Difference b/w MVC Core or What's new in version 8.0,7.0,5.0
 Constractior in c#.
