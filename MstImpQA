@@ -16,8 +16,8 @@ interface vs abstract class
 a)Local var use inside a function not accessible outside function,Global var use outside of other function or anywhere.
 b)var store any type of data strin,int,array,boolean it change on compile time.
 Filters(Action,Authorization,Result,Exception) in MVC Core.Filter vs Middleware,concept of Filters in MVC?
-Filters used for security purpose before user are login-
-JWT-Json web Token 
+Filters used for security purpose before user are login-Special Type of method for use secure,prevent our application
+JWT-Json web Token (use data transfer b/w two parties securly)-transfer data in json object.
 Explain Model, View and Controller (business,Data layer-Model,display-User,Logic)
 Middleware in mvc core.
 Types Of Class-Abstract(Inheret by Other class),Static(Not Inheret by Other Class),Sealed(Not Inheret by Other Class),Partial(class Devid into Partial),Nested Class
