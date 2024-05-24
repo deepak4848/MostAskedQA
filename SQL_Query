@@ -1,0 +1,131 @@
+create database db_pr290124
+use db_pr290124
+use Db_Practice
+
+create table employee1
+(
+id int primary key identity,
+name varchar(50),
+age int,
+country varchar(50)
+)
+---------------method of data insert------------
+insert into employee1(name,age,country)values('alok kumar',12,'India')
+insert into employee1 values('amit',22,'china')  ---values pass according table
+insert  employee1 values ('chandan',32,'bhutan')
+insert  employee1 values ('dayanand',52,'pakistan')
+
+insert into employee1(name,age,country)values('sumit',12,'India')
+insert into employee1 values('vandna',22,'china')  ---values pass according table
+insert  employee1 values ('sangam',32,'nepal')
+-----------------
+select * from employee1
+-----------------------
+update employee set name='anuj kumar' where id=1   --for change table
+update employee set name='lalit' where id=4
+--------------------------------------
+delete from employee where id =3
+delete from employee 
+delete employee where id=2
+---------------add new column in a table-----------------------
+alter table employee add address varchar(50)  ---add column
+alter table employee drop column address     -----adrop column
+----------------------------------------------
+select * from employee where name like 'a%'
+--------------------------------------------
+sp_rename 'employee','tblemployee'  ---rename table name
+select * from tblemployee
+sp_rename 'tblemployee.country','country_name'  ---rename column name
+---------------------------------------------------
+sp_renamedb 'db_pr290124','db_Query290124'  ---rename database
+-------------------------------------------------------
+alter table tblemployee alter column age varchar(50)  ----rename column type
+
+-----------multiple column add and drop-----------
+alter table tblemployee add city varchar(50),phoneno int,hobby varchar(50)  --add multiple column
+alter table tblemployee drop column city,phoneno,hobby
+--------------------------------------------------------
+select * from tblemployee
+select * from tblemployee where id=4
+select * from tblemployee where id =7 or id=9
+select * from tblemployee where id in (7,4)
+select * from tblemployee where name ='amit'
+-------------------Use of wild card operater----------
+select * from tblemployee where name like 'alok%'
+select * from tblemployee where name like '%alok%'
+select * from tblemployee where name like 'an%'
+select * from tblemployee where name like 'a%'
+select * from tblemployee where name like 'a%' or name like 'v%'
+select * from tblemployee where name like 'a%' or name like 'c%'
+select * from tblemployee where name like '[a,d]%'
+select * from tblemployee where name like '[a-d]%'
+select * from tblemployee where name like '[^a-d]%'
+--select * from tblemployee where name like 
+select top 5 * from tblemployee order by name asc
+-----------------------------------------------------
+select * from employee1
+select lower(name) as Fname from employee1
+select upper(name) as Fname from employee1
+--truncate table employee
+select name+''+country as Ncountry from employee1
+alter table employee1 add  salary int
+alter table employee1 add Gender varchar(40)
+--update employee1 set salary=10000 where id=7
+---------------------------------------
+select max(salary) from employee1
+select min(salary) from employee1
+------------------------------------------
+SELECT RTRIM(Name) AS [Name] FROM [Employee1]
+SELECT LTRIM(Name) AS [Name] FROM [Employee1]
+-------------------case statement-------------------------
+select name,
+case
+when Gender='Male' then 'M'
+when Gender='Female' then 'F'
+END 
+as Gender from employee1
+----------------Prefix--------------------
+select 'hello '+name from employee1
+select * from employee1
+select * from employee1 where salary>12000  ----Greter then 12k
+select * from employee1 where salary<12000 --Less then 12K
+-----------------2nd Highest Salary------------------------
+select top 1 salary from (select top 3 salary from employee1 order by salary desc)as T order by salary asc
+-------------------------
+alter table employee1 add Department varchar(30) 
+------------------Dept wise TotalSalary-----------
+select Department,Sum(salary) as total_salary from employee1 group by department
+-------------------------------------------------
+select Department,Sum(salary) as total_salary from employee1 group by department order by sum(salary) desc
+select Department,count(department) as Total_No_OfDept,Sum(salary) as total_salary from employee1 group by department order by sum(salary) asc
+--select Department, avg(salary) as Avg_Salary from employee1
+-----------------------------------------------------
+WITH CTE_Employee AS
+(
+SELECT FirstName, LastName, Gender, Salary,
+COUNT(Gender) OVER (PARTITION BY Gender) AS TotalGender
+FROM EmployeeDemographics ED
+JOIN EmployeeSalary ES
+ON ED.EmployeeID = ES.EmployeeID
+WHERE Salary > '45000'
+)
+SELECT FirstName, LastName, Gender, TotalGender
+FROM CTE_Employee
+WHERE TotalGender = (SELECT MIN(TotalGender) FROM CTE_Employee)
+
+--------------Two Type Transection--------------
+
+1)Implecit Transection  Direct insert,Update,Delete  ---can not Roll or Undo back data
+2)Expecit Transection ---Use of Transection key  ---- Can Roll back
+
+--------------------Commit Rollback Transection--------------------------------
+select * from employee1
+begin transaction
+update employee1 set name='alok gupta' where id=1
+delete employee1 where id=7
+
+-------------roll back transaction-----
+rollback transaction ---undo
+
+commit transaction
+
