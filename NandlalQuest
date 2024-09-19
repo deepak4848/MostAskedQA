@@ -192,5 +192,188 @@ Answer =>  with cte_1 as
            select *, ROW_NUMBER() OVER(partition by name order by name ) as rank_number from First_duplicate
            )
            delete from cte_1 where rank_number > 1
-		  
+==========================-------------------C#----------------======================
+
+Sorting of integer. =>(Ascending order)
+
+         List<int> list = new List<int>() {43, 30, 54, 50, 2, 1, 47, 60, 53, 20, 22, 31};
+
+            int temp;
+            for (int i = 0; i < list.Count; i++)
+            {
+                for (int j = 0; j < list.Count; j++)
+                {
+                    if (list[i] < list[j])
+                    {
+                        temp = list[i];
+                        list[i] = list[j];  
+                        list[j] = temp;
+
+                    }
+                }
+            }
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
+			
+			
+
+Prime Number => programme
+
+            int a = 11;
+            for (int i = 2; i <= a; i++)
+            {
+                if (a % i == 0)
+                {
+                    Console.WriteLine("It is not prime number =>" + a);
+                    break;   
+                }
+                else
+                {
+                    Console.WriteLine("It is prime number => " + a);
+                    break;
+                }
+            }
+            Console.ReadLine();
+
+// second method
+			
+			List<int> list = new List<int>() { 1,10,20,3,40};
+foreach (var item in list)
+{
+    for (int i = 2; i <= list.Count; i++)
+    {
+        if (item % i == 0)
+        {
+            Console.WriteLine("It is not prime number =>" + item);
+            break;
+        }
+        else
+        {
+            Console.WriteLine("It is prime number => " + item);
+            break;
+        }
+    }
+}
+			
+// Reverse string programme	 ==>
+
+			          string name = "Rajan";
+            string revName = string.Empty;
+            char[] chars = name.ToCharArray();
+            for (int i = name.Length - 1; i <= name.Length; i--)
+            {
+                if (i < 0)
+                {
+                  break;
+                }
+                else
+                {
+                    revName += chars[i].ToString();
+                   
+                }
+
+            }
+            Console.WriteLine(revName);		
+			
+//  Reverse number like 1234 outcome 4321
+
+            int number = 1234;
+            int reversedNumber = 0;
+
+            while (number > 0)
+            {
+                // Extract the last digit of the number
+                int lastDigit = number % 10;
+
+                // Shift the digits of the reversed number to the left and add the last digit
+                reversedNumber = reversedNumber * 10 + lastDigit;
+
+                // Remove the last digit from the original number
+                number = number / 10;
+            }
+
+            Console.WriteLine("Reversed Number: " + reversedNumber);
+            Console.ReadLine();			
+			
+		
+Factorial Programme.  ==> 
+
+     try
+     {
+         Console.WriteLine("Enter your number");
+         int number = int.Parse(Console.ReadLine());
+
+         int result = Factorial(number);
+         Console.WriteLine(result);
+     }
+     catch (Exception ex)
+     {
+         Console.WriteLine(ex.Message);
+     }
+     Console.ReadLine();
+
+
+ static int Factorial(int number)
+ {
+     if (number < 0 || number == 0)
+     {
+         throw new NotImplementedException("Your number is not less then Zero");
+     }
+     int fact = 1;
+    
+     for (int i = 1; i <= number; i++)
+     {
+          fact *= i;
+     }
+     return fact;
+
+ }
+
+
+Fabonic series programme. =============>
+
+     try
+     {
+         Console.Write("Enter the number of terms: ");
+         int terms = int.Parse(Console.ReadLine());
+
+         PrintFibonacci(terms);
+         //Console.WriteLine(result);
+     }
+     catch (Exception ex)
+     {
+         Console.WriteLine(ex.Message);
+     }
+     Console.ReadLine();
+
+ static void PrintFibonacci(int terms)
+ {
+     int a = 0, b = 1, c;
+
+     Console.Write($"{a} {b} ");
+
+     for (int i = 2; i < terms; i++)
+     {
+         c = a + b;
+         Console.Write($"{c} ");
+         a = b;
+         b = c;
+     }
+ } 
+ 
+ Swapping two number programme => 
+   Console.WriteLine("Swap two number");
+   int a = 400, b = 100, c;
+
+   Console.WriteLine($"a number is {a} and b number is {b}");
+   c = a;
+   a = b;
+   b = c;
+
+   Console.WriteLine($"swap a is => {a} b is => {b}");
+   Console.ReadLine();
+  
+
 
