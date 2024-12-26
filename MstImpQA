@@ -1,14 +1,11 @@
------------------2nd Highest Salary------------------------
-select top 1 salary from (select top 3 salary from employee1 order by salary desc)as T order by salary asc
------------------------------------------------------------------------------
-Local(Use inside function) and Global(Use Outside anywhere function) verible.Veriable in C#.difference between var And Dynamic keyword.
-SelfJoin-Jion with self table
+------------------------------------C#---------------------
+Local var(Use inside function) and Global var(Use Outside anywhere function) verible.Veriable in C#.difference between var And Dynamic keyword.
 DataType in SQL-Int,Float,Decimal,Char,Varchar,Datetime.Diff b/w Char(Fixed Length),Varchar(Variable length) & nvarchar(Veriable length,Supprot unicharacter,international text)
 DataTypes in C#-int,float,String,Boolean,Char,String,enum,struct
 DataTypes in JavaScript-let(Globle Scope,Entire Function),Var(Use OutsideFunctio),Constant(Nonchange)
 Constant(declare constants,Con not be Changed,not change compileTime) & Readonly(used to value inetilized constructor,Change Runtime)
 Abstract(TypeofPoymorphism-Overriding,have fields and properties,not create object so inheret,base/drive) and Interface-both used to abstraction
-constructor-
+constructor-same name of class
 Tuple->is a data structure that allows you to group together a fixed number of elements of possibly different types into a single object
 singleton and static class in c#
 Default TimoutOfSession->timeout to 20 minutes
@@ -21,7 +18,7 @@ JWT-Json web Token (use data transfer b/w two parties securly)-transfer data in 
 Explain Model, View and Controller (business,Data layer-Model,display-User,Logic)
 Middleware in mvc core.
 Types Of Class-Abstract(Inheret by Other class),Static(Not Inheret by Other Class),Sealed(Not Inheret by Other Class),Partial(class Devid into Partial),Nested Class
-Access Modifier-Public,private,protected,Internal
+Access Modifier-Public(Accessible from anywhere),private(Accessible by defining class or struct),protected(Accessible in defining class.),Internal(Accessible by assembly)
 Design pattern-MVC,DI(Dependency Injection),Repository 
 DI-software design pattern allows to separate the dependencies of a class from its implementation.Loosely copuled(Repo,Interface Pattern Project,),Titly copule(Simple Project),use-Easy modif,Reuse Code,Easy Testing 
 TypesofView-Partial View,Partial view and partial Class
@@ -62,15 +59,28 @@ Abstraction and Encapsulation?show only necessary features without background de
 Method Overloading?method name is same, but parameter,parameter order,parameter type is diff,CompileTime Polymorphism(Early Bind)
 Method Overriding?base(Parent) class (need to mark a method as virtual) method in derived(Chield) class with different logic but same method name(override keyword) and same parameter.RunTime(Latebind)
 Can we write the logic in the Interface?before 8.0 no but in we can write
-diff b/w “Stored Procedure” and “Function”?
-diff b/w the DELETE & TRUNCATE commands?
-diff b/w a Local Temporary and Global Temporary Table”?
-SQL joins?Inner,Outer(Left/Right),Full 
+----------------------------
 A string value can’t be changed. Each time you change a string variable, it actually creates a new string instance and dereferences the old value String is immutable
 An enum is a special "class" that represents a group of constants (collection of unchangeable/read-only variables).
 State mamangment is technique(process to maintain data,behaviour) in c#.server side(Session,application state) and client side(viewstate,hiddenfield,Coockies,QuryString).
 What is the Singleton Design Pattern,ensures that a class has only one instance, and provides a global point of access 
---------------------------------SQL-----------------------
+--------------------------------SQL-----------------------------------------------------------------------------------
+-----------------2nd Highest Salary------------------------
+SELECT MAX(salary) from Employee where salary < (select max(salary) from Employee)
+select top 1 salary from (select top 3 salary from employee1 order by salary desc)as T order by salary asc
+select top 1 * from (SELECT top 4 * FROM Employee order by salary desc) as temp order by salary desc
+-----Alternative row find even row------------
+select * from Employee where EmpId % 2 = 0
+-----Alternative row find odd row------------
+select * from Employee where EmpId % 2 = 1
+diff b/w “Stored Procedure” and “Function”?
+diff b/w the DELETE & TRUNCATE commands?
+diff b/w a Local Temporary and Global Temporary Table”?
+SQL joins?Inner,Outer(Left/Right),Full 
+-----------------------------------------------------------------------------
+SelfJoin-Jion with self table
+---self join-------
+SELECT A1.EmpId, A1.EmpName, A1.salary FROM Employee as A1,Employee as A2 where A1.EmpId = A2.EmpId
 Trigger-Special type of store procedure use to track deleted record or information(DML,DDL)
 View-Virtual table data not store in database(to improve performance,DataSecurity,hide actual table information)
 Where,GroupBy,Having-where used for filter data on condition,GroupBy use for take value in group used by aggerigate function having clause contain aggregate function with group by
